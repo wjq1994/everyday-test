@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a = 10;
+			a.pro = 10;
+			console.log(a.pro);
+			console.log(a.pro + a);
+			var b = 'hello';
+			b.pro = 'world';
+			console.log(b.pro + b);
+			//解析：JavaScript引擎内部在处理对某个基本类型 a进行形如a.pro的操作时，会在内部临时创建一个对应的包装类型(对数字类型来说就是Number类型)的临时对象，并把对基本类型的操作代理到对这个临时对象身上，使得对基本类型的属性访问看起来像对象一样。但是在操作完成后，临时对象就销毁了，下次再访问时，会重新建立临时对象，当然就会返回undefined了
+		</script>
+	</body>
+</html>
