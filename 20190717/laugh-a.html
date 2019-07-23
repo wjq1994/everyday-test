@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			<!-- a在什么情况下，控制台会输出hello world -->
+			//var a = ?;
+			// var a = {
+			// 	num: 0,
+			// 	toString: function() {
+			// 		 return ++this.num
+			// 	}
+			// }
+			
+			var a = {
+				num: [],
+				toString: function() {
+					 return ++this.num
+				}
+			}
+			if(a == 1 && a == 2 && a == 3) {
+				console.log('Hello world')
+			}
+			//原理: 利用== 判断的类型转换, Object调用toString
+		</script>
+	</body>
+</html>
