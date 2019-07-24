@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//已知如下数组:
+			//编写一个程序将数组扁平化去除
+			var arr = [ [11,22,33], [13,14,15,15], [16, 17, 18, 19, [11, 12, [12, 13, [14] ] ] ], 12];
+			
+			arr.flat(Infinity)
+			new Set(arr.flat(Infinity))
+			
+			//flat方法接受一个参数n, 可以将深度为n的数组扁平化, 然后去重并排序, 去重可以用set, 排序用sort
+			//当然也可以使用递归等其他方法
+			var newArray = Array.from(new Set(arr.flat(Infinity))).sort((a,b) => a-b);
+			console.log(newArray)
+			
+			//涉及到的知识点
+		</script>
+	</body>
+</html>
